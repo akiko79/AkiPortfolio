@@ -1,0 +1,352 @@
+
+/* ハンバーガーメニュー */
+@media screen and (max-width: 950px) {
+  aside {
+    display: none;
+  }
+  .smaho {
+    display: block;
+  }
+  #hamburger {
+    opacity: 0;
+    position: fixed;
+  }
+  .burger:hover {
+    cursor: pointer;
+  }
+  label .burger {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+    width: 2rem;
+    height: 2em;
+  }
+
+  label .burger::before,
+  label .burger::after,
+  label .burger .bar {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: gray;
+    content: "";
+    transition: all .5s;
+  }
+  label .burger::before {
+    top: 0;
+    transform-origin: top right;
+  }
+  label .burger::after {
+    bottom: 0;
+    transform-origin: bottom right;
+  }
+  label .burger .bar {
+    top: 45%;
+  }
+
+  #smaho-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #smaho-menu::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 195px;
+    background: rgba(245, 243, 241, 0.85);
+    content: "";
+    transform: translateX(100%);
+    transform-origin: top right;
+    transition: transform 0.3s;
+  }
+
+  #smaho-menu a {
+    color: #4f9a94;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px;
+    text-align: right;
+    text-decoration: none;
+    transform: translateX(155%);
+    transition: all 0.15s transform .5s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  #smaho-menu a:hover {
+    opacity: 0.6;
+  }
+
+  #hamburger:checked + label .burger::before,
+  #hamburger:checked + label .burger::after {
+    width: 130%;
+  }
+  #hamburger:checked + label .burger::before {
+    transform: rotate(-45deg);
+  }
+  #hamburger:checked + label .burger::after {
+    transform: rotate(45deg);
+  }
+  #hamburger:checked + label .burger .bar {
+    transform: scale(0);
+  }
+
+  #hamburger:checked ~ #smaho-menu::before {
+    transform: translateX(0);
+  }
+  #hamburger:checked ~ #smaho-menu a {
+    transform: translateX(0);
+  }
+  #hamburger:checked ~ #smaho-menu {
+    transform: translateX(0);
+  }
+
+  #hamburger:checked ~ .back {
+    background: #000000;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  .responsive-header {
+    display: block;
+    width: 100%;
+    background-color: #e0e0e0a1;
+    border-bottom: none;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  .top-img{
+    background-position: center;
+  }
+
+  .responsive-footer {
+    display: block;
+    text-align: center;
+    background-color: gray;
+    padding: 20px;
+    font-size: 12px;
+    color: #fff
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  label .burger {
+    width: 1.5rem;
+    height: 1.7em;
+  }
+  header {
+    height: 56px;
+    font-size: 25px;
+  }
+  .top-img {
+    display: none;
+  }
+  .res-top-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+  }
+
+  .container {
+    padding: 15px 13px;
+  }
+  .section, .responsive-portfolio-text h2 {
+    font-size: 20px;
+  }
+
+  /* font-size */
+  .workskills-title h2 {
+    font-size: 18px;
+  }
+  .workskills-text h3 {
+    font-size: 16px;
+  }
+  .chronology ul li, .jq-title, .purpose-text p {
+    font-size: 15px;
+  }
+  .aboutme-text p, .jq-txts p, .portfolio a, .inside, .inside li, .jq-txts ul li, .workskills-text p, .workskills-column-text p{
+    font-size: 14px;
+  }
+
+  /* AboutMe */
+  .section {
+  margin: 25px auto 10px;
+  }
+  .aboutme {
+    display: block;
+  }
+  .pic{
+    margin: 0 auto;
+    width: 250px;
+    height: 150px;
+  }
+  .aboutme-text {
+    justify-content: center;
+  }
+  .id {
+    margin: 50px 10px 0;
+  }
+  .experience-page {
+    margin: 0 10px;
+  }
+
+  .chronology {
+    line-height: 24px;
+  }
+  .jq-title p{
+    padding-top: 3px;
+  }
+  .jq-txts{
+    margin: 0 4px 20px;
+    text-align: justify;
+    line-height: 25px;
+  }
+  .hour {
+    margin-left: 10px;
+  }
+  .purpose-page {
+    display: block;
+    margin-top: 0;
+  }
+  .purposes {
+    display: block;
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  .purpose-title {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    position: inherit;
+    top: 28px;
+  }
+  .purpose-title p {
+    line-height: 40px;
+    padding-top: 0;
+  }
+  br {
+    display: none;
+  }
+  .purpose-text {
+    width: 100%;
+    padding: 30px 10px 10px;
+    line-height: 24px;
+  }
+
+  /* ポートフォリオ  */
+  .portfolio {
+    display: block;
+  }
+  .pic2, .portfolio-text h2 {
+    display: none;
+  }
+  .responsive-portfolio-text {
+    display: block;
+  }
+  .responsive-portfolio-text h2 {
+    text-align: center;
+    position: relative;
+  }
+  .pic3 {
+    width: 300px;
+    height: 200px;
+    margin: 20px auto 0;
+    overflow-y: scroll;
+    border-radius: 4px;
+    border: solid 1px #795548c7;
+    cursor: pointer;
+  }
+  .scroll{
+    text-align: center;
+    font-size: 10px;
+    padding-left: 0;
+  }
+  .portfolio-text h2 {
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  .portfolio-text p, .portfolio-text > .code{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .portfolio-text h2::before {
+    height: 47px;
+  }
+  .btn {
+    width: 214px;
+    margin: 10px auto 0;
+  }
+  .inside, .inside li {
+    line-height: 25px;
+  }
+  .fa-gitlab {
+    padding-top: 5px;
+    padding-right: 4px;
+  }
+  .border {
+    display: none;
+  }
+  .border-responsive {
+    display: block;
+  }
+  .jq-title {
+    margin-left: 0;
+  } 
+  .jq-txts ul {
+    list-style: none;
+  }
+
+
+  /* スキル */
+  .workskills-page {
+    display: block;
+  }
+  .workskills {
+    width: 95%;
+  }
+  .workskills-title {
+    margin-top: 25px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .workskills-title > .skill-icon {
+    font-size: 34px;
+    margin-bottom: 0;
+  }
+  .workskills-title h2 {
+    font-weight: 600;
+    padding-left: 10px;
+    line-height: 34px;
+  }
+  .workskills-text {
+    line-height: 27px;
+  }
+  .workskills-column-text {
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,423 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  max-width: 100%; 
+}
+
+* {
+  box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0; 
+  max-width: 100%;
+  font-family: serif, Arial, Helvetica, sans-serif;
+}
+aside {
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0e0e0;
+  border-right: #4f9a94 solid 2px;
+}
+aside ul {
+  margin-top: 100px;
+  line-height: 50px;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 13px;
+}
+aside ul li a {
+  font-family: serif;
+  font-size: 18px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #4f9a94;
+  font-weight: bold;
+}
+li a:hover, .email:hover {
+  cursor: pointer;
+  color: #3333;
+}
+.cantact-email {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: -18px;
+}
+.email {
+  color: #4f9a94;
+}
+
+.smaho {
+  display: none;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #bdbdbd;
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 5px;
+}
+.responsive-footer {
+  display: none;
+}
+
+
+/* メイン */
+main {
+  flex: 1;
+  background-color: #efefef;
+}
+header {
+  height: 70px;
+  background-color: #80cbc4;
+  border-bottom: #4f9a94 2px solid;
+  margin: 0 auto;
+  font-family: serif;
+  color: #fff;
+  font-size: 42px;
+  text-align: center;
+  letter-spacing: 5px;
+  padding-top: 10px;
+}
+.responsive-header {
+  display: none;
+}
+
+.container {
+  background-color: #efefef;
+  padding: 15px 20px 70px;
+}
+.empty {
+  width: 100%;
+  max-height: 390px;
+  background: transparent
+}
+.section {
+  font-size: 27px;
+  font-weight: 900;
+  color: #795548;
+  text-align: center;
+  margin: 25px auto;
+  border-bottom: 2px solid #795548;
+}
+
+.top-img {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  border-bottom: 2px solid #4f9a94;
+  opacity: 0.7;
+  background-attachment: fixed;
+  background-image: url(../photo/img_7338.jpg);
+  border-bottom: 2px solid #4f9a94;
+}
+.res-top-img {
+  display: none;
+}
+
+/* AboutMe */
+.pic > img {
+  width: 300px;
+  height: auto;
+  border: #795548 solid 2px;
+  margin-right: 40px;
+}
+.id {
+  margin-right: 30px;
+}
+.aboutme {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.aboutme-text {
+  display: flex;
+}
+.aboutme-text p {
+  margin-left: 6px;
+  line-height: 26px;
+}
+.title-icon {
+  display: flex;
+}
+.title-icon > .t-icon {
+  color: #795548c7;
+  line-height: 48px;
+  font-size: 23px;
+  padding-right: 4px;
+}
+
+
+
+/* 経歴 */
+.experience-page {
+  margin: 0 30px;
+}
+.experience {
+  margin: 20px;
+}
+.chronology {
+  line-height: 29px;
+  list-style-position: inside;
+  margin-left: 20px;
+}
+.chronology ul li {
+  list-style: none;
+}
+.hour {
+  margin-left: 17px;
+}
+
+/* JQuery */
+.jq-click{
+  margin-top: 8px;
+}
+.jq-title {
+  background: #e4e1e1;
+  border-radius: 3px;
+  display: flex;
+  justify-content: start;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+.jq-title:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+.jq-title > .more {
+  margin: 0px 6px;
+  font-size: 21px;
+  line-height: 29px;
+}
+.jq-title > p:hover, .jq-title > .more {
+  color: #4f9a94;
+}
+.jq-txts {
+  margin: 0 5px 20px;
+  padding: 5px 10px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+      border: 1px solid #bdbdbd;
+  border-radius: 2px;
+}
+
+/* purpose */
+.purpose-page {
+  margin: 40px 0;
+}
+.purposes {
+  display: flex;
+  margin-bottom: 15px;
+}
+.purpose-title {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #80cbc4;
+  border: 1px solid #4f9a94;
+  margin: 20px auto;
+}
+.purpose-title p {
+  color: #fff;
+  text-align: center;
+  line-height: 26px;
+  padding-top: 33px;
+}
+.purpose-text {
+  width: 80%;
+  line-height: 29px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #fff9;
+  border: 1px solid #bdbdbd;
+}
+
+/* ポートフォリオ  */
+.portfolio {
+  display: flex;
+}
+.pic2 {
+  width: 300px;
+  height: 400px;
+  margin: 0 50px;
+  overflow-y: scroll;
+  border-radius: 3px;
+  border: solid 1px #795548c7;
+  cursor: pointer;
+}
+.scroll {
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-left: 53px;
+}
+.portfolio a{
+  text-decoration: none;
+}
+.btn {
+  width: 230px;
+  background-color: #80cbc4;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #fff;
+  transform: translate(2px,2px);
+}
+.title {
+  color: #785548;
+  padding-top: 13px;
+  font-weight: 600;
+}
+.portfolio-text h2 {
+  margin: 20px 0;
+  padding: 10px 0 10px 20px;;
+  position: relative;
+}
+.portfolio-text h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 56px;
+  background: #94d0c9;
+}
+.responsive-portfolio-text {
+  display: none;
+}
+.inside, .inside li {
+  list-style: none;
+  padding-left: 10px;
+  line-height: 29px;
+  text-indent: -1em;
+}
+
+.border {
+  background: #fff9;
+  border: 1px solid #bdbdbd;
+  margin: 10px 10px 30px;
+  padding: 0 20px 13px;
+  border-radius: 3px;
+}
+.border-responsive {
+  display: none;
+}
+.line {
+  background: linear-gradient(transparent 75%, #80cbc4 90%);
+}
+.code {
+  color: #555555;
+}
+.code:hover {
+  text-decoration: underline;
+}
+
+
+/* スキル */
+.workskills-page {
+  display: flex;
+  margin-bottom: 40px;
+}
+.workskills {
+  width: 30%;
+  margin: 0 auto;
+}
+.workskills-title {
+  color: #555555;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.workskills-title > .skill-icon {
+  font-size: 42px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.workskills-text {
+  line-height: 30px;
+}
+.workskills-text h3 {
+  color: #555555;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 10px;
+}
+.workskills-text {
+  text-align: center;
+}
+.workskills-column {
+  margin: 0 16px;
+  line-height: 30px;
+}
+.workskills-column-text {
+  text-align: justify;
+  margin-right: 10px;
+}
+.column-btn {
+  margin: 10px auto;
+}
+.column-btn a{
+  text-decoration: none;
+}
+
+
+/* Contact */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form {
+ display: flex;
+ flex-direction: column;
+}
+
+.f-text {
+  width: 350px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.f-textarea {
+  width: 350px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.f-submit {
+  background-color: coral;
+  width: 250px;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+.f-text:hover, .f-textarea:hover {
+  cursor: auto;
+  opacity: 0.7;
+}
+.f-submit:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #fff;
+  transform: translate(2px,2px);
+}
+
